@@ -23,3 +23,5 @@ function generarCUIT(){
     return `${prefijo}${dni}${digitoVerificador}`;
 
 }
+
+export { generarCUIT, generarDNI, generarEmail, generarTelefono };

@@ -10,15 +10,18 @@ describe('template spec', () => {
   it('Automatizacion Registro', () => {
 
       cy.fixture('register.ok.json').then((cliente) => {
-
+    
       cliente.CUIT = generarCUIT()
       cliente.telefono = generarTelefono()
       cliente.email = generarEmail()
-      cy.registroCte(cliente) //llamo al commands
-      //validaciones
+      cliente.confirmarEmail = cliente.email
+      cy.registroCte(cliente)//llamo al commands
+      //registrarse
       cy.get('[data-cy="btn-registrarse"]').click()
+      // validar retorno a home
       cy.url().should('include', '/auth/login')
-      cy.contains('Registro exitoso').should('be.visible')
+      //validar boton del login
+      cy.contains('Login').should('be.visible')
     })
 
   })

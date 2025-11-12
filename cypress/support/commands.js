@@ -26,23 +26,19 @@
 
 Cypress.Commands.add('registroCte',(cliente)=>{
     cy.get('[data-cy="input-razon-social"]').type(cliente.razonSocial)
-    cy.get('[data-cy="input-cuit"]').type(CUIT.razonSocial)
-    cy.get('[data-cy="select-provincia"]').type(cliente.provincia)
-    cy.get('[data-cy="select-localidad"]').type(cliente.localidad)
+    cy.get('[data-cy="input-cuit"]').type(cliente.CUIT)
+
+    cy.get('[data-cy="select-provincia"]').type(`${cliente.provincia}{enter}`)
+    cy.get('[data-cy="select-localidad"]').type(`${cliente.localidad}{enter}`)
+
     cy.get('[data-cy="input-direccion"]').type(cliente.direccion)
     cy.get('[data-cy="input-telefono"]').type(cliente.telefono)
-    cy.get('[data-cy="input-razon-email"]').type(cliente.email)
-
-    cy.get('[data-cy="input-razon-email"]').type(cliente.email)
+    cy.get('[data-cy="input-email"]').type(cliente.email)
     cy.get('[data-cy="input-confirmar-email"]').type(cliente.confirmarEmail)
-
     cy.get('[data-cy="input-password"]').type(cliente.password)
     cy.get('[data-cy="input-repetir-password"]').type(cliente.confirmarPassword)
-
-    cy.get('[data-cy="input-password"]').type(cliente.password)
-
     // cy.get('[data-cy="input-switch-establecimiento"]').select()
-    cy.get('[data-cy="btn-registrarse"]').click()
+    // cy.get('[data-cy="btn-registrarse"]').click()
 
 
 
