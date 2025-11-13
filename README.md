@@ -8,6 +8,10 @@ Actividad 2 Automatización de Registro de Cliente
 - Crear custom commands reutilizables para el formulario (combobox, fecha segmentada, etc.).
 - Diseñar casos positivos y negativos sin depender de la capa de red.
 
+Plan de pruebas Register: https://docs.google.com/spreadsheets/d/1mwOwGaDc1yfycRrCPHmuwSQ0UEHopjAR/edit?usp=sharing&ouid=112844744323252161665&rtpof=true&sd=true
+
+
+
 Estructura sugerida: 
 ```
 cypress/
