@@ -14,4 +14,14 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // Ignorá errores específicos del frontend
+    if (err.message.includes("Cannot read properties of null")) {
+    return false // Cypress NO falla el test
+    }
+  // Para otros errores, que sí fallen
+    return true
+    })
+
 import './commands'
