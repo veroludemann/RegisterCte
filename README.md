@@ -29,6 +29,7 @@ cypress/
 <i>Configurar baseUrl a https://ticketazo.com.ar
 
 
+<img src="https://github.com/user-attachments/assets/2b340cd4-cfbf-4880-a435-c39e68f888c2" width="350">
 
 
 
