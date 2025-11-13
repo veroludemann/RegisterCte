@@ -7,7 +7,7 @@ describe('template spec', () => {
         cy.visit('/auth/registerClient') //viene del base url configurado en cypress.config.js
     });
 
-  it('Automatizacion Registro Ok', () => {
+  it('1- Registro exitoso', () => {
 
       cy.fixture('register.ok.json').then((cliente) => {
     
